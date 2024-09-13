@@ -1,0 +1,36 @@
+.Body-Div {
+    position: relative;
+    top:12%;
+    width: 100%;
+    height: 88%;
+    background-color:rgba(31, 40, 51, 1);
+    justify-content: center;
+    overflow: auto;
+}
+
+.Column {
+    float: left;
+}
+
+.left {
+    width: 20%;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 60%;
+    margin: auto;
+}
+
+.right {
+    width: 20%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

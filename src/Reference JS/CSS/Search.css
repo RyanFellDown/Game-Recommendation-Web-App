@@ -1,0 +1,67 @@
+.search {
+    width: 80%;
+    height: 75px;
+    background-color: rgba(113, 123, 136, 0.2);
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0%, 125%);
+}
+
+.row{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 10px;
+}
+
+.Search-Middle {
+    display: table-cell;
+    transform: translate(0%, -10%);
+    font-size: 36px;
+}
+
+.searchBar {
+    width: 30vw;
+    height: 35px;
+    outline: transparent;
+    border-radius: 15px;
+    transition-duration: 0.4s;
+}
+
+.searchBar:hover {
+    outline: rgba(31, 40, 51, 1) solid 4px;
+    transition-duration: 0.4s;
+}
+
+.searchInput {
+    color: rgba(102, 252, 241, 1);
+    background-color:rgba(113, 123, 136, 0);
+    border: 0;
+    width: 28vw;
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+    transform: translate(0%, 10%);
+}
+
+.searchBar:focus {
+    outline: rgba(31, 40, 51, 1) solid 4px;
+    border-radius: 15px;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+#searchButton{
+    background-image: url('C:/Users/rfell/react-recommend-page/src/Reference JS/Images/searchImage.png');
+    transform: translate(0%, 40%);
+    border-radius: 15px;
+    max-height: 35px;
+    max-width: 35px;
+    background-size: 35px;
+}
