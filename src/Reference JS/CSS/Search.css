@@ -58,10 +58,15 @@
 }
 
 #searchButton{
-    background-image: url('C:/Users/rfell/react-recommend-page/src/Reference JS/Images/searchImage.png');
     transform: translate(0%, 40%);
     border-radius: 15px;
     max-height: 35px;
     max-width: 35px;
     background-size: 35px;
+}
+
+#searchIMG {
+    transform: translate(-20%, 0%);
+    height: 35px;
+    width: 35px;
 }

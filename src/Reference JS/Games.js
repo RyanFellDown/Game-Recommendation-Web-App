@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import PC from './Images/PCLogo.png';
+import AddImage from './Images/AddButton.png'
 import './CSS/Games.css';
 
 function Games({gamesData}) {
@@ -8,7 +9,6 @@ function Games({gamesData}) {
     const [data1, setData1] = useState([]);
     const [data2, setData2] = useState([]);
     const [data3, setData3] = useState([]);
-    var counter = 0;
 
     console.log(gamesData)
     
@@ -99,7 +99,7 @@ function Games({gamesData}) {
             <div className = "Games-Middle">
                 <div className = "Games-Button">
                     <button id="GamesButton" onClick = {() => handleLibrary(data1[0])}>
-                        
+                        <img src={AddImage} id='GamesImage'></img>
                     </button>
                 </div>
             </div>
@@ -125,8 +125,8 @@ function Games({gamesData}) {
             </div>
             <div className = "Games-Middle">
                 <div className = "Games-Button">
-                    <button id="GamesButton" onClick = {() => handleLibrary(data2[0])} >
-                        
+                    <button id="GamesButton" onClick = {() => handleLibrary(data2[0])}>
+                        <img src={AddImage} id='GamesImage'></img>
                     </button>
                 </div>
             </div>
@@ -153,7 +153,7 @@ function Games({gamesData}) {
             <div className = "Games-Middle">
                 <div className = "Games-Button">
                     <button id="GamesButton" onClick = {() => handleLibrary(data3[0])} >
-
+                        <img src={AddImage} id='GamesImage'></img>
                     </button>
                 </div>
             </div>

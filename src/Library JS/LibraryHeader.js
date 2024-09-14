@@ -1,23 +1,30 @@
 import React from 'react';
-import './LibraryCSS/Header.css';
+import ProfilePic from './Images/profilePic.png'
+import tripleLine from './Images/TripleLine.png'
+import './LibraryCSS/LibraryHeader.css';
+
 
 
 function LibraryHeading() {
 
   return (
-    <div className="Header-Div">
       <div className="LibraryRow">
         <div className="LibraryHeader-Left">
-          <button/>
+          <button id="LeftImage">
+            <img src={tripleLine} id="tripleImage"/>
+          </button>
         </div>
         <div className="LibraryHeader-Middle">
           <p>Library</p>
         </div>
         <div className="LibraryHeader-Middle" id="LibraryProfile">
-          <a href="/"><button /></a>
+          <a href="/">
+            <button>
+              <img src={ProfilePic} id="ProfileImage"/>
+            </button>
+          </a>
         </div>
       </div>
-    </div>
   );
 }
 

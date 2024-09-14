@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './LibraryCSS/Saved.css';
 import PCLogo from './Images/PCLogoTest.png'
 import axios from 'axios';
+import MinusImage from './Images/MinusButton.png'
 
 
 //This component returns all the games the user has saved to localStorage to respective HTML elements,
@@ -36,7 +37,7 @@ function SavedGames() {
       //Here, we sort all the games in localStorage into an array.
       while (x<localStorage.length){
         //We don't want 'order' variable from localStorage displayed, so we only add other variables.
-        if(localStorage.key(x) !== 'order'){
+        if(localStorage.key(x) !== 'order' && localStorage.getItem(localStorage.key(x)) !== 'N'){
           const gameName = localStorage.getItem(localStorage.key(x)).replace(/"/g, '');
           LSList.push([localStorage.key(x), gameName])
         }
@@ -86,7 +87,9 @@ function SavedGames() {
             <a href={game.url} target="_blank" rel="noopener noreferrer" className='gameURLs'>
               {game.name}
             </a>
-            <button id="removeGame" onClick = {() => handleRemove(game.key)} />
+            <button id="removeGame" onClick = {() => handleRemove(game.key)}>
+              <img src={MinusImage} id='MinusIMG'/>
+            </button>
           </div>
         ))
       ) : (

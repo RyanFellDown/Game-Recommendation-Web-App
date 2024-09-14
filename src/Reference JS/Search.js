@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import SearchImage from './Images/searchImage.png'
 import './CSS/Search.css';
 
 
@@ -33,12 +34,13 @@ function Search({setGamesData}) {
             <div className = "row">
                 <div className = "Search-Middle">
                     <button id="searchButton" onClick={handleSubmit}>
-
+                        <img src={SearchImage} id='searchIMG'></img>
                     </button>
                 </div>
                 <div className = "Search-Middle">
                     <form className='searchBar' onSubmit={handleSubmit}>
-                        <input id='searchpart' className='searchInput' value={input} onChange={(x) => setInput(x.target.value)} type='text' placeholder='Search here...'/>
+                        <input id='searchpart' className='searchInput' value={input} onChange={(x) => setInput(x.target.value)} type='text' placeholder='Search here...'>
+                        </input>
                     </form>
                 </div>
                 <br />

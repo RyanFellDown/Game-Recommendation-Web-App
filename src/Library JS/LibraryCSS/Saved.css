@@ -26,17 +26,21 @@
     padding-right: 50px;
 }
 
+#MinusIMG {
+    transform: translate(-15%, -3.5%);
+    height: 43px;
+    width: 43px;
+}
 
 #removeGame{
     transform: translate(0%, 5%);
-    background-image: url('C:/Users/rfell/react-recommend-page/src/Library JS/Images/MinusButton.png') !important;
     cursor: pointer;
     background-color: transparent;
     border: transparent;
     float: right;
     height: 40px;
     width: 40px;
-    border-radius: 10px;
+    border-radius: 14px;
     background-size: 40px;
     transition-duration: 0.4s;
 }

@@ -1,0 +1,60 @@
+.LibraryRow{
+    display: table;
+    position: absolute;
+    width: 100%;
+    height: 12%;
+    background-color: rgba(113, 123, 136, 0.2);
+    color: rgba(102, 252, 241, 1);
+    text-align: center;
+    border-spacing: 10px;
+    font-size: 26px;
+}
+
+
+.LibraryHeader-Left {
+    display: table-cell;
+    transform: translate(-59.5%, -15%);
+    position: relative;
+}
+
+.LibraryHeader-Left button{
+    transform: translate(0%, 30%);
+    cursor: pointer;
+    float: right;
+    height: 40px;
+    width: 40px;
+    border-radius: 0;
+}
+
+.LibraryHeader-Left button:hover{
+    box-shadow: none;
+}
+
+#tripleImage {
+    height: 40px;
+    width: 40px;
+}
+
+
+.LibraryHeader-Middle {
+    display: table-cell;
+    transform: translate(8%, -15%);
+    font-size: 26px;
+}
+
+
+#LibraryProfile button{
+    transform: translate(-140%, 40%);
+    cursor: pointer;
+    height: 55px;
+    width: 55px;
+}
+
+.LibraryHeader-Middle button:hover{
+    box-shadow: none;
+}
+
+#ProfileImage {
+    width: 55px;
+    height: 55px;
+}

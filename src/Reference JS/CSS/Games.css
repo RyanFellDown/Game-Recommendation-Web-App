@@ -24,9 +24,14 @@
     max-width: 100px;
 }
 
+#GamesImage{
+    height: 75px;
+    width: 75px;
+    transform: translate(-8.5%, -1.5%);
+}
+
 button{
     transform: translate(-50%, 5%);
-    background-image: url('C:/Users/rfell/react-recommend-page/src/Reference JS/Images/AddButton.png');
     cursor: pointer;
     background-color: transparent;
     border: transparent;
