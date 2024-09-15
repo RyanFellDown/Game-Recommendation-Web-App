@@ -7,13 +7,13 @@ import json
 reviewScoresList = []
 reviewsTotalList = []
 
-game_ratings = pd.read_csv('C:/Users/rfell/Game Recommendation Software/SteamTrends2023.csv')
+game_ratings = pd.read_csv('./SteamTrends2023.csv')
 
 
 #We then send the values into necessary lists for later use.
 def toLists():
     #We first initialize the dataframe, taking in the Steam Trends 2023 CSV.
-    game_ratings = pd.read_csv('C:/Users/rfell/Game Recommendation Software/SteamTrends2023.csv')
+    game_ratings = pd.read_csv('./SteamTrends2023.csv')
 
     #Cleaning Data First
     game_ratings = game_ratings.drop(['App ID', 'Reviews D7', 'Reviews D30', 'Reviews D90', 'name_slug'], axis=1)
