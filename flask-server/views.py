@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, make_response
 from GameRecFile import getGenres
 from flask_cors import CORS
 from GameRecFile import *
@@ -6,7 +6,8 @@ from GameRecFile import *
 app = Flask(__name__)
 
 #, origins='*'
-CORS(app, resources={r"/api/*": {"origins": "https://game-recommendation-web-app-ryanfelldown-ryanfelldowns-projects.vercel.app"}})
+CORS(app)
+
 
 @app.route('/api/process-input/', methods = ["GET", "POST"])
 def processInput():
@@ -15,10 +16,17 @@ def processInput():
         #Whatever request user sent, set as 'user_input'.
         data = request.json
         user_input = data.get('input', '')
+        json_output = getGenres(user_input)
+        
+        response = make_response(json_output)
+        response.headers['Access-Control-Allow-Origin'] = 'http://localhost:3000/'
+        response.headers['Access-Control-Allow-Methods'] = 'POST, GET'
+        response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
         
         #'user_input' should be a string, returns json output of similar games.
         return (
-            getGenres(user_input)
+            #getGenres(user_input)
+            response
         )
     except Exception as e :
         print(f"Error: {e}")
