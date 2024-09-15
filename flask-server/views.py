@@ -6,7 +6,7 @@ from GameRecFile import *
 app = Flask(__name__)
 
 #, origins='*'
-CORS(app)
+CORS(app, resources={r"/api/*": {"origins": "https://game-recommendation-web-app-ryanfelldown-ryanfelldowns-projects.vercel.app"}})
 
 @app.route('/api/process-input/', methods = ["GET", "POST"])
 def processInput():
