@@ -55,7 +55,6 @@ def weightedAverages(reviewScoresList, reviewsTotalList):
 #Returns Genres of Game: Else, Gives Alternative Titles
 def getGenres(gameName):
     #This will be called from the Flask end first, so we need to call the other functions first.
-    
     toLists()
     
     if(game_ratings == gameName).any().any():
@@ -97,9 +96,8 @@ def genreSimilarity(list_Final):
     copyGameRatings = game_ratings.copy()
     copyGameRatings.sort_values("RelevanceScore", axis=0, ascending=False, inplace=True, na_position='first')
     topFive = copyGameRatings.head(n=5)
-    topFive = topFive.drop(['App ID', 'Reviews D7', 'Reviews D30', 'Reviews D90', 'name_slug', 'Reviews Total', 'Release Date', 'Tags', 'Revenue Estimated', 'Modified Tags', 'Steam Page', 'WeightedColumn', 'RelevanceScore'], axis=1)
+    topFive = topFive.drop(['Tags'], axis=1)
     game_ratings.sort_values("Reviews Total", axis=0, ascending=False, inplace=True, na_position='first')
-    print(game_ratings.head(n=5))
     return topFive
 
 
