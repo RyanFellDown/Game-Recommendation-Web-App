@@ -16,7 +16,6 @@ def toLists():
     game_ratings = pd.read_csv('./SteamTrends2023.csv')
 
     #Cleaning Data First
-    game_ratings = game_ratings.drop(['App ID', 'Reviews D7', 'Reviews D30', 'Reviews D90', 'name_slug'], axis=1)
     game_ratings['ReviewScores'] = game_ratings['ReviewScores'].map(lambda x: x.rstrip('%'))
 
     #We're going to use these two values for the recommendation score, so we add them to lists we can access.
@@ -55,6 +54,7 @@ def weightedAverages(reviewScoresList, reviewsTotalList):
 #Returns Genres of Game: Else, Gives Alternative Titles
 def getGenres(gameName):
     #This will be called from the Flask end first, so we need to call the other functions first.
+    
     toLists()
     
     if(game_ratings == gameName).any().any():
@@ -96,8 +96,9 @@ def genreSimilarity(list_Final):
     copyGameRatings = game_ratings.copy()
     copyGameRatings.sort_values("RelevanceScore", axis=0, ascending=False, inplace=True, na_position='first')
     topFive = copyGameRatings.head(n=5)
-    topFive = topFive.drop(['Tags'], axis=1)
+    topFive = topFive.drop(['Reviews Total', 'Tags', 'WeightedColumn', 'RelevanceScore'], axis=1)
     game_ratings.sort_values("Reviews Total", axis=0, ascending=False, inplace=True, na_position='first')
+    print(game_ratings.head(n=5))
     return topFive
 
 
