@@ -9,13 +9,23 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route('/api/process-input/', methods = ["GET", "POST"])
+@app.route('/api/process-input/', methods = ["POST"])
 def processInput():
+    if request.method !='POST':
+        return jsonify({'error': 'Wrong method, use POST'}), 405
+    
+    if not request.is_json:
+        return jsonify({'error': 'Not json'}), 415
+    
+        
     #If the method is correct (aka POST), continue.
     try:
         #Whatever request user sent, set as 'user_input'.
         data = request.json
         user_input = data.get('input', '')
+        
+        if not user_input:
+            return jsonify({'error': 'No input'})
 
         #'user_input' should be a string, returns json output of similar games.
         return (
