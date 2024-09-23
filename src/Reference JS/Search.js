@@ -12,7 +12,7 @@ function Search({setGamesData}) {
         event.preventDefault();
 
         //Data is calling the API here...
-        const response = await fetch('http://127.0.0.1:8080/api/process-input/', {
+        const response = await fetch('https://game-recommendation-flask-backend.onrender.com/api/process-input/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
