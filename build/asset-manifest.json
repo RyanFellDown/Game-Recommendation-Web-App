@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.39485848.css",
+    "main.js": "/static/js/main.f2c07b17.js",
+    "static/js/453.f3a5c77f.chunk.js": "/static/js/453.f3a5c77f.chunk.js",
+    "static/media/PCLogo.png": "/static/media/PCLogo.6801bad0b1fcc69fff84.png",
+    "static/media/profilePic.png": "/static/media/profilePic.56736dc4f9ef50bd60dc.png",
+    "static/media/MinusButton.png": "/static/media/MinusButton.617755c66dfa4b4098f6.png",
+    "index.html": "/index.html",
+    "main.39485848.css.map": "/static/css/main.39485848.css.map",
+    "main.f2c07b17.js.map": "/static/js/main.f2c07b17.js.map",
+    "453.f3a5c77f.chunk.js.map": "/static/js/453.f3a5c77f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39485848.css",
+    "static/js/main.f2c07b17.js"
+  ]
+}
