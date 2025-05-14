@@ -69,12 +69,6 @@ def getGenres(gameName):
         five = genreSimilarity(list_Final)
         
         return toJSON(five)
-        
-    #else:
-        #print("No game found, perhaps you're looking for one of these instead?")
-        #suggested_Games = game_ratings.loc[game_ratings['Title'].str.contains(gameName)]
-        #suggested_Titles = suggested_Games['Title']
-        #print(suggested_Titles)
 
 
 #Takes in genres from requested games, and keeps games with the same genres as that game
@@ -117,10 +111,8 @@ def toJSON(topFive):
     
     return ({
         "games": [
-            #json_Return1,
             json_Return2,
             json_Return3,
-            json_Return4,
-            #json_Return5
+            json_Return4
         ]
     })
